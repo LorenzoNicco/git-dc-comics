@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+// controller
+use App\Http\Controllers\admin\ComicController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,4 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');;
+Route::resource('comics', ComicController::class);
